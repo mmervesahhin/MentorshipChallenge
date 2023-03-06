@@ -9,19 +9,20 @@ public class ChallangeMain {
 	
 		System.out.println("Enter a number to check if it's prime or not (0 to stop):");
 		double num=input.nextDouble();
-		
+
 		while(num!=0) {
-			if(num!=(int)num || num<0)
-				System.out.println("This input is not valid!\n");
-			
+			if(num%1!=0)
+				System.out.println("This input is not valid! Enter an integer\n");
+			else if(num<0)
+				System.out.println("This input is not valid! Enter a positive number\n");
 			else {
 				if(num==1)
 					System.out.println("1 is not prime by definition!");
 				else {
-					if(ChallangeSys.isPrime((int)num))
-						System.out.println("\n"+ (int)num+" is prime!");
+					if(ChallangeSys.isPrime(num))
+						System.out.printf("\n%.0f is prime!", num);
 					else
-						System.out.println("\n"+ (int)num+" is not prime!");
+						System.out.printf("\n%.0f is not prime!", num);
 				}
 			}	
 			
