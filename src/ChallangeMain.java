@@ -6,7 +6,8 @@ public class ChallangeMain {
 		// TODO Auto-generated method stub
 		
 		Scanner input = new Scanner(System.in);
-	
+
+
 		System.out.println("Enter a number to check if it's prime or not (0 to stop):");
 		double num=input.nextDouble();
 
