@@ -1,11 +1,17 @@
+import java.math.BigInteger;
 
 public class ChallangeSys {
 
-	public static boolean isPrime(double num) {
+	public static boolean isPrime(BigInteger num) {
+		BigInteger zero=BigInteger.ZERO;
+		BigInteger one=BigInteger.ONE;
 		
-		for(int i=2;i<num;i++) {
-			if(num%i==0)
+		BigInteger i=BigInteger.TWO;
+		
+		while(num.compareTo(i)==1) {
+			if(num.mod(i).compareTo(zero)==0)
 				return false;
+			i=i.add(one);
 		}
 		
 		return true;
